@@ -1,0 +1,39 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[,] matrizIdentidad = new int[4, 4];
+
+       
+        for (int fila = 0; fila < 4; fila++)
+        {
+            for (int columna = 0; columna < 4; columna++)
+            {
+                if (fila == columna)
+                {
+                    matrizIdentidad[fila, columna] = 1;
+                }
+                else
+                {
+                    matrizIdentidad[fila, columna] = 0;
+                }
+            }
+        }
+
+        
+        Console.WriteLine("Matriz Identidad\n");
+
+        for (int fila = 0; fila < 4; fila++)
+        {
+            for (int columna = 0; columna < 4; columna++)
+            {
+                Console.Write(matrizIdentidad[fila, columna] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        Console.ReadKey();
+    }
+}
